@@ -259,12 +259,7 @@ h2 {
     animation: flashAnimation 4s ease infinite;
 }
 
-@media screen and (max-width: 767px) {
-    .flash-overlay {}
 
-}
-
-    {}
 
 .flash-text {
     font-size: 80px;
