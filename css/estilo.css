@@ -50,11 +50,11 @@ header {
 
 footer {
     background-image: url(../img/FOTOSLOCAL/fondoAmarillo.jpg);
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
-    margin-top: auto;
+    padding: 5px;
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 
 }
@@ -62,7 +62,7 @@ footer {
 /* FOOTER  */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1%;
     background-color: #f8f9fa;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
@@ -76,6 +76,12 @@ footer {
     font-family: 'Roboto', sans-serif;
 }
 
+@media screen and (max-width: 576px) {
+    .fuentesNav {
+        font-size: small;
+        padding-right: 4%;
+    }
+}
 
 .nav-link active {
     color: #f3dd18;
@@ -88,8 +94,14 @@ footer {
 .paraCelular .navbar-toggler-icon {
     background-color: #e4d509;
 
-    width: 2rem;
+    width: 3rem;
     height: 3rem;
+}
+
+@media screen and (max-width: 576px) {
+    .paraCelular .navbar-nav .nav-link {
+        font-size: 14px;
+    }
 }
 
 .navbar {
@@ -141,7 +153,7 @@ h1 {
 
 /* las imágenes del carrusel */
 .custom-carousel .carousel-inner img {
-    max-width: 60%;
+    max-width: 80%;
 
     height: auto;
 
@@ -222,7 +234,7 @@ h2 {
 }
 
 
-@media (max-width: 900px) and (min-width: 401px) {
+@media (max-width: 900px) and (min-width: 576px) {
     .container {
         margin-top: 20px;
     }
@@ -236,16 +248,23 @@ h2 {
 /*  flash de "Novedades" */
 .flash-overlay {
     position: absolute;
-    top: 5;
-    left: 5;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 60%;
+    height: 40%;
     background-color: rgba(230, 226, 198, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     animation: flashAnimation 4s ease infinite;
 }
+
+@media screen and (max-width: 767px) {
+    .flash-overlay {}
+
+}
+
+    {}
 
 .flash-text {
     font-size: 80px;
@@ -429,12 +448,12 @@ dd {
 
 .product-card {
     border: 1px solid #b69b03;
-    padding: 2rem;
+    padding: 4rem;
     text-align: center;
     background-color: rgba(51, 49, 49, 0.9);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -442,9 +461,23 @@ dd {
     align-items: center;
 }
 
-duct-card:hover {
-    transform: translateY(-5px);
+.product-card {
+    transition: 0.3s;
 }
+
+@media screen and (min-width: 768px) {
+    .product-card:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product-card:hover {
+        transform: none;
+    }
+}
+
+
 
 .product-card img {
     max-width: 70%;
@@ -455,7 +488,7 @@ duct-card:hover {
 }
 
 .product-card:hover img {
-    transform: scale(1.5);
+    transform: scale(1.03);
 }
 
 
@@ -474,4 +507,5 @@ duct-card:hover {
 .product-card button {
     margin-top: auto;
 }
+
 /* primera subida*/
